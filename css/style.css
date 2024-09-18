@@ -1,0 +1,42 @@
+img{
+    height: 200px;
+}
+figure{
+    position: relative;
+    overflow: hidden;
+}
+figcaption{
+    --marigen-value:10px;
+    position: absolute;
+    bottom: var(--marigen-value) ;
+    left:  var(--marigen-value) ;
+    right:  var(--marigen-value) ;
+    transform: translateY( calc( 100% + var(--marigen-value)));
+    transition: 1s all;
+}
+
+figure:hover figcaption{
+
+transform: translateY(0);
+}
+.mylayer{
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+}
+
+.innerDiv{
+    width: 50%;
+    margin: auto;
+    height: 350px;
+    background-image: url(../images/counters-bg.jpg);
+    background-size: 100% 100%;
+}
+.innerDiv i{
+    cursor: pointer;
+}
+@media screen and (min-width: 989px) and (max-width: 1200px) {
+    img{
+        height: 150px;
+    }
+    
+}
